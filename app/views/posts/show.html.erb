@@ -23,9 +23,9 @@
         <hr>
           <!-- Date/Time -->
           <p><i class="fa fa-clock-o" aria-hidden="true"></i> Posted by Heber Sandoval on <%= @post.created_at.strftime("%B %d, %Y") %>
-          <%= link_to edit_post_path(@post), class: "btn btn-default btn-xs" do %>
-    					<i class="fa fa-pencil" aria-hidden="true"></i>
-          <% end %>
+            <%= link_to edit_post_path(@post), class: "btn btn-default btn-xs" do %>
+      					<i class="fa fa-pencil" aria-hidden="true"></i>
+            <% end %>
           </p>
         <hr>
         <!-- Post Content -->
