@@ -13,3 +13,35 @@
  *= require_tree .
  *= require_self
  */
+
+ @import "bootstrap";
+ @import "bootstrap-sprockets";
+ @import "font-awesome";
+
+ // Carousel
+ html,
+ body {
+     height: 100%;
+ }
+
+ // Portfolio
+ body {
+     padding-top: 70px; /* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
+ }
+
+ // Blog
+ .blog-item {
+     margin-bottom: 25px;
+ }
+
+ .hero-feature {
+     margin-bottom: 30px;
+ }
+
+ // Sidebar
+
+
+// Footer
+ footer {
+     margin: 50px 0;
+ }

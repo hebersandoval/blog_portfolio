@@ -1,0 +1,47 @@
+// Carousel
+/* CUSTOMIZE THE CAROUSEL ----------------------------------- */
+
+/* You can change the height of the carousel by changing the height in the class below. It is set to 50% by default, but can be any height! */
+
+// Carousel
+.item,
+.active,
+.carousel-inner {
+    height: 100%;
+}
+
+/* Background images are set within the HTML using inline CSS, not here */
+
+.fill {
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+}
+
+// *************** This is for the bottom carousel *******************
+/* Carousel base class */
+.carousel {
+ height: 500px;
+ margin-bottom: 60px;
+}
+/* Since positioning the image, we need to help out the caption */
+.carousel-caption {
+ z-index: 10;
+}
+
+/* Declare heights because of positioning of img element */
+.carousel .item {
+ height: 500px;
+ background-color: #777;
+}
+.carousel-inner > .item > img {
+ position: absolute;
+ top: 0;
+ left: 0;
+ min-width: 100%;
+ height: 500px;
+}
