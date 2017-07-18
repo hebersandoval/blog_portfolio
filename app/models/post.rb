@@ -8,6 +8,11 @@ class Post < ApplicationRecord
     "#{id}-#{slug}"
   end
 
+  # Search for posts based on its content
+  def self.search(search)
+    where("title || content LIKE ?", "%" + search + "%")
+  end
+
   private
 
   def set_slug

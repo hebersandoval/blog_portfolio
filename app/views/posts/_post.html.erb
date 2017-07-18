@@ -1,0 +1,15 @@
+<% @posts.each do |p| %>
+    <div class="col-sm-6 blog-item">
+        <div class="thumbnail">
+            <a href="#">
+              <img class="img-responsive" src="https://unsplash.it/700/300?random" alt="">
+            </a>
+            <h3><%= link_to p.title, post_path(p) %></h3>
+            <p class="lead">
+              by <a href="#">Heber Sandoval</a>
+            </p>
+            <p><i class="fa fa-clock-o" aria-hidden="true"></i></span> Posted on <%= p.created_at.strftime("%B %d, %Y") %></p>
+            <p><%= truncate p.content, length: 100 %></p>
+        </div>
+    </div>
+<% end %>

@@ -18,19 +18,11 @@
 
         <!-- Blog Post Row -->
         <div class="row">
-            <% @posts.each do |p| %>
-                <div class="col-sm-6 blog-item">
-                    <div class="thumbnail">
-                        <a href="#">
-                          <img class="img-responsive" src="https://unsplash.it/700/300?random" alt="">
-                        </a>
-                        <h3><%= link_to p.title, post_path(p) %></h3>
-                        <p class="lead">
-                          by <a href="#">Heber Sandoval</a>
-                        </p>
-                        <p><i class="fa fa-clock-o" aria-hidden="true"></i></span> Posted on <%= p.created_at.strftime("%B %d, %Y") %></p>
-                        <p><%= truncate p.content, length: 100 %></p>
-                    </div>
+            <% if @posts.present? %>
+                <%= render 'post' %>
+            <% else %>
+                <div class="alert alert-danger" role="alert">
+                    <p style="color:red";><em>There are no posts containing the term(s): <strong><%= params[:search] %>.</strong></em></p>
                 </div>
             <% end %>
         </div>
@@ -61,6 +53,6 @@
     </div>
       <!-- Blog Sidebar Widgets Column -->
       <%= render 'pages/blog_sidebar' %>
-  </div>  <!-- .row -->
+  </div><!-- .row -->
 
   <!-- Footer -->
