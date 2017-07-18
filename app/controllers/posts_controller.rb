@@ -1,5 +1,7 @@
 class PostsController < ApplicationController
   before_action :set_post, only: [:show, :edit, :update]
+  before_action :set_all_categories, only: [:index, :show, :new, :edit]
+
   def index
     @posts = Post.all
   end
@@ -46,5 +48,9 @@ class PostsController < ApplicationController
 
   def set_post
     @post = Post.find(params[:id])
+  end
+
+  def set_all_categories
+    @categories = Category.all
   end
 end
