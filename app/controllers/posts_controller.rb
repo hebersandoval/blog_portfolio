@@ -9,6 +9,9 @@ class PostsController < ApplicationController
 
   def new
     @post = Post.new
+    if params[:category_id]
+      @category = Category.find(params[:category_id])
+    end
   end
 
   def create
@@ -34,7 +37,7 @@ class PostsController < ApplicationController
   private
 
   def post_params
-    params.require(:post).permit(:title, :content)
+    params.require(:post).permit(:title, :content, category_ids: [])
   end
 
   def set_post
