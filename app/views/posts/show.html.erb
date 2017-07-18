@@ -22,7 +22,14 @@
         <img class="img-responsive" src="https://unsplash.it/900/300?random" alt="">
         <hr>
           <!-- Date/Time -->
-          <p><i class="fa fa-clock-o" aria-hidden="true"></i> Posted by Heber Sandoval on <%= @post.created_at.strftime("%B %d, %Y") %>
+          <p><i class="fa fa-clock-o" aria-hidden="true"></i> Posted on <%= @post.created_at.strftime("%B %d, %Y") %> by Heber Sandoval
+
+            <!-- Post categories -->
+						<% @post.categories.each do |category| %>
+							<span>In <a href=""><%= category.name %></a></span>
+					  <% end %>
+
+            <!-- Edit link -->
             <%= link_to edit_post_path(@post), class: "btn btn-default btn-xs" do %>
       					<i class="fa fa-pencil" aria-hidden="true"></i>
             <% end %>

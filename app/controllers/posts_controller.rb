@@ -16,6 +16,10 @@ class PostsController < ApplicationController
 
   def create
     @post = Post.create(post_params)
+    if params[:category_id]
+      @category = Category.find(params[:category_id])
+      @post.categories << @category
+    end
     if @post.save
       redirect_to post_path(@post)
     else
