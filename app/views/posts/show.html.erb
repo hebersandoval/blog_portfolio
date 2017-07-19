@@ -25,8 +25,8 @@
           <p><i class="fa fa-clock-o" aria-hidden="true"></i> Posted on <%= @post.created_at.strftime("%B %d, %Y") %> by Heber Sandoval
 
             <!-- Post categories -->
-						<% @post.categories.each do |category| %>
-							<span>In <a href=""><%= category.name %></a></span>
+						<% @post.categories.each do |c| %>
+  							<span>In <%= link_to c.name, category_path(c) %></span>
 					  <% end %>
 
             <!-- Edit link -->

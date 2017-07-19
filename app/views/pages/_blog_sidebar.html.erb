@@ -24,7 +24,7 @@
 
                     <!-- Show all post's categories -->
                     <% @categories.each do |c| %>
-                        <li><a href="#"><%= c.name %></a></li>
+                        <li><%= link_to c.name, category_path(c) %></li>
                     <% end %>
                 </ul>
             </div><!-- /.col-lg-12 -->
