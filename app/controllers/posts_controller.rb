@@ -51,7 +51,7 @@ class PostsController < ApplicationController
   end
 
   def set_post
-    @post = Post.find(params[:id])
+    @post = Post.find_by_slug(params[:id])
   end
 
   def set_all_categories

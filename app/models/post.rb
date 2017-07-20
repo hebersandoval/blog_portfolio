@@ -1,11 +1,16 @@
 class Post < ApplicationRecord
   before_create :set_slug
+  validates :slug, presence: true
 
   has_many :post_categories
   has_many :categories, through: :post_categories
 
+  def slug
+    title.downcase.gsub(' ', '-')
+  end
+
   def to_param
-    "#{id}-#{slug}"
+    slug
   end
 
   # Search for posts based on its content
