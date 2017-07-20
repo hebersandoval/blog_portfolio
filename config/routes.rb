@@ -3,6 +3,9 @@ Rails.application.routes.draw do
   get 'signin', to: 'pages#signin'
   get 'about', to: 'pages#about'
 
+  get 'portfolio', to: 'projects#index'
+  get 'blog', to: 'posts#index'
+
   resources :posts
   resources :projects
   resources :categories
