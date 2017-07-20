@@ -33,6 +33,11 @@
             <%= link_to edit_post_path(@post), class: "btn btn-default btn-xs" do %>
       					<i class="fa fa-pencil" aria-hidden="true"></i>
             <% end %>
+
+            <!-- Delete link -->
+            <%= link_to @post, class: "btn btn-danger btn-xs", method: :delete, data: { confirm: "You sure?" } do %>
+  	            <i class="fa fa-trash-o" aria-hidden="true"></i>
+	          <% end %>
           </p>
         <hr>
         <!-- Post Content -->
