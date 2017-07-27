@@ -1,24 +1,39 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# A Site for Blog and Project Posting
 
-Things you may want to cover:
+This blog/portfolio app is built using RoR, JQuery, Bootstrap and Devise for authentication and authorization.
 
-* Ruby version
+## Getting Started
 
-* System dependencies
+To use this app, clone or download this repository into a desire directory.
 
-* Configuration
+If you would like to contribute to the project, feel free to fork this repository, work on the project and then submit a pull request for the project creator to review.
 
-* Database creation
+### Installing
 
-* Database initialization
+To get the program up and running, please:
 
-* How to run the test suite
+```
+$ git clone https://github.com/hebersandoval/blog_portfolio
 
-* Services (job queues, cache servers, search engines, etc.)
+$ bundle install
 
-* Deployment instructions
+$ rails db:migrate
 
-* ...
+$ rails s
+```
+
+Then navigate to localhost:3000 and use the app will load the homepage.
+
+To exit the rails server, in your console type: control + C
+
+
+## Author
+
+[Héber Sandoval](https://github.com/hebersandoval/blog_portfolio)
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
+
