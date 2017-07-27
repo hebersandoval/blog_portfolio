@@ -1,5 +1,3 @@
-# README
-
 # A Site for Blog and Project Posting
 
 This blog/portfolio app is built using RoR, JQuery, Bootstrap and Devise for authentication and authorization.
