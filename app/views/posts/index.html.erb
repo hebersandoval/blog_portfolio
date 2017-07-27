@@ -1,44 +1,46 @@
-<!-- Page Heading/Breadcrumbs -->
-<div class="row">
-    <div class="col-lg-12">
-        <h1 class="page-header">Blog
-            <small></small>
-        </h1>
-        <ol class="breadcrumb">
-            <li><a href="/">Home</a>
-            </li>
-            <li class="active">Blog</li>
-        </ol>
-    </div>
-</div><!-- /.row -->
+<div class="container">
+  <!-- Page Heading/Breadcrumbs -->
+  <div class="row">
+      <div class="col-lg-12">
+          <h1 class="page-header">Blog
+              <small></small>
+          </h1>
+          <ol class="breadcrumb">
+              <li><a href="/">Home</a>
+              </li>
+              <li class="active">Blog</li>
+          </ol>
+      </div>
+  </div><!-- /.row -->
 
-<div class="row">
-    <!-- Blog Entries Column -->
-    <div class="col-md-9">
+  <div class="row">
+      <!-- Blog Entries Column -->
+      <div class="col-md-9">
 
-        <!-- Blog Post Row -->
-        <div class="row">
-            <% if @posts.present? %>
-                <%= render 'post' %>
-            <% else %>
-                <div class="alert alert-danger" role="alert">
-                    <p style="color:red";><em>There are no posts containing the term(s): <strong><%= params[:search] %>.</strong></em></p>
-                </div>
-            <% end %>
-        </div>
+          <!-- Blog Post Row -->
+          <div class="row">
+              <% if @posts.present? %>
+                  <%= render 'post' %>
+              <% else %>
+                  <div class="alert alert-danger" role="alert">
+                      <p style="color:red";><em>There are no posts containing the term(s): <strong><%= params[:search] %>.</strong></em></p>
+                  </div>
+              <% end %>
+          </div>
 
-        <!-- Pagination -->
-        <div class="row text-center">
-            <div class="col-lg-12">
-                <ul class="pagination">
-                    <%= will_paginate @posts %>
-                </ul>
-            </div>
-        </div>
+          <!-- Pagination -->
+          <div class="row text-center">
+              <div class="col-lg-12">
+                  <ul class="pagination">
+                      <%= will_paginate @posts %>
+                  </ul>
+              </div>
+          </div>
 
-    </div>
-      <!-- Blog Sidebar Widgets Column -->
-      <%= render 'pages/blog_sidebar' %>
-  </div><!-- .row -->
+      </div>
+        <!-- Blog Sidebar Widgets Column -->
+        <%= render 'pages/blog_sidebar' %>
+    </div><!-- .row -->
+</div><!-- .container -->
 
-  <!-- Footer -->
+<!-- Footer -->

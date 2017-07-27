@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   root 'pages#home'
   get 'signin', to: 'pages#signin'
+  get 'services', to: 'pages#services'
   get 'about', to: 'pages#about'
 
   get 'portfolio', to: 'projects#index'

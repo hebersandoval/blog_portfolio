@@ -1,62 +1,64 @@
-<!-- Page Heading/Breadcrumbs -->
-<div class="row">
-    <div class="col-lg-12">
-        <h1 class="page-header">Portfolio
-            <small></small>
-        </h1>
-        <ol class="breadcrumb">
-            <li><a href="/">Home</a>
-            </li>
-            <li class="active">Portfolio</li>
-        </ol>
-    </div>
-</div><!-- /.row -->
+<div class="container">
+    <!-- Page Heading/Breadcrumbs -->
+    <div class="row">
+        <div class="col-lg-12">
+            <h1 class="page-header">Portfolio
+                <small></small>
+            </h1>
+            <ol class="breadcrumb">
+                <li><a href="/">Home</a>
+                </li>
+                <li class="active">Portfolio</li>
+            </ol>
+        </div>
+    </div><!-- /.row -->
 
-<div class="row">
-    <!-- Portfolio Column -->
-    <div class="col-md-9">
+    <div class="row">
+        <!-- Portfolio Column -->
+        <div class="col-md-9">
 
-        <!-- Portfolio Row -->
-        <div class="row">
-            <% @projects.each do |p| %>
-            <div class="col-sm-4 blog-item">
-                <div class="thumbnail">
-                    <a href="#">
-                      <img class="img-responsive" src="https://unsplash.it/700/300?random" alt="">
-                    </a>
-                    <h4><%= link_to p.title, project_path(p) %></h4>
-                    <p><%= truncate p.description, length: 80 %></p>
+            <!-- Portfolio Row -->
+            <div class="row">
+                <% @projects.each do |p| %>
+                <div class="col-sm-4 blog-item">
+                    <div class="thumbnail">
+                        <a href="#">
+                          <img class="img-responsive" src="https://unsplash.it/700/300?random" alt="">
+                        </a>
+                        <h4><%= link_to p.title, project_path(p) %></h4>
+                        <p><%= truncate p.description, length: 80 %></p>
+                    </div>
+                </div>
+                <% end %>
+            </div>
+
+            <!-- Pagination -->
+            <div class="row text-center">
+                <div class="col-lg-12">
+                    <ul class="pagination">
+                        <li>
+                            <a href="#">&laquo;</a>
+                        </li>
+                        <li class="active">
+                            <a href="#">1</a>
+                        </li>
+                        <li>
+                            <a href="#">2</a>
+                        </li>
+                        <li>
+                            <a href="#">3</a>
+                        </li>
+                        <li>
+                            <a href="#">&raquo;</a>
+                        </li>
+                    </ul>
                 </div>
             </div>
-            <% end %>
-        </div>
 
-        <!-- Pagination -->
-        <div class="row text-center">
-            <div class="col-lg-12">
-                <ul class="pagination">
-                    <li>
-                        <a href="#">&laquo;</a>
-                    </li>
-                    <li class="active">
-                        <a href="#">1</a>
-                    </li>
-                    <li>
-                        <a href="#">2</a>
-                    </li>
-                    <li>
-                        <a href="#">3</a>
-                    </li>
-                    <li>
-                        <a href="#">&raquo;</a>
-                    </li>
-                </ul>
-            </div>
         </div>
-
-    </div>
-    <!-- Portfolio Sidebar Widgets Column -->
-    <%= render 'pages/portfolio_sidebar' %>
-</div><!-- .row -->
+        <!-- Portfolio Sidebar Widgets Column -->
+        <%= render 'pages/portfolio_sidebar' %>
+    </div><!-- .row -->
+</div><!-- .container -->
 
 <!-- Footer -->
