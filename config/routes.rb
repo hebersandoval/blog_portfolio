@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  devise_for :users
   root 'pages#home'
   get 'signin', to: 'pages#signin'
   get 'services', to: 'pages#services'
