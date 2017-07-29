@@ -1,5 +1,4 @@
 Rails.application.routes.draw do
-  devise_for :users
   root 'pages#home'
   get 'signin', to: 'pages#signin'
   get 'services', to: 'pages#services'
@@ -8,6 +7,8 @@ Rails.application.routes.draw do
   get 'portfolio', to: 'projects#index'
   get 'blog', to: 'posts#index'
 
+  devise_for :users
+  resources :users
   resources :posts
   resources :projects
   resources :categories
