@@ -10,7 +10,7 @@
             <ol class="breadcrumb">
                 <li><a href="/">Home</a>
                 </li>
-                <li class="active">User Profile</li>
+                <li class="active">Profile</li>
             </ol>
         </div>
     </div><!-- /.row -->
@@ -21,4 +21,7 @@
 
     <p>Name: <%= @user.name if @user.name %></p>
     <p>Email: <%= @user.email if @user.email %></p>
+    <p>
+      <%= link_to "Edit User", edit_user_registration_path %>
+    </p>
 </div>
