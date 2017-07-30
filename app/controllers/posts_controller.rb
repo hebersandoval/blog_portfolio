@@ -1,5 +1,6 @@
 class PostsController < ApplicationController
   before_action :authenticate_user!, except: [:index, :show]
+  before_action :admin_only, except: [:index, :show]
   before_action :set_post, only: [:show, :edit, :update]
   before_action :set_all_categories, only: [:index, :show, :new, :edit]
 
@@ -57,5 +58,11 @@ class PostsController < ApplicationController
 
   def set_all_categories
     @categories = Category.all
+  end
+
+  def admin_only
+    unless current_user.admin?
+      redirect_to root_path, :alert => "Access denied."
+    end
   end
 end
