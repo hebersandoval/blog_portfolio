@@ -12,6 +12,9 @@ class ProjectsController < ApplicationController
 
   def new
     @project = Project.new
+    if params[:category_id]
+      @category = Category.find(params[:category_id])
+    end
   end
 
   def create
@@ -37,7 +40,7 @@ class ProjectsController < ApplicationController
   private
 
   def project_params
-    params.require(:project).permit(:title, :description)
+    params.require(:project).permit(:title, :description, category_ids: [])
   end
 
   def set_project
