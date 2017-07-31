@@ -26,9 +26,9 @@
             <p><i class="fa fa-clock-o" aria-hidden="true"></i> Posted by Heber Sandoval on <%= @project.created_at.strftime("%B %d, %Y") %>
 
               <!-- Project categories -->
-              <% @project.categories.each do |c| %>
-                  <span>In <%= link_to c.name, category_path(c) %></span>
-              <% end %>
+              <%# @project.categories.each do |c| %>
+                  <!-- <span>In <%#= link_to c.name, category_path(c) %></span> -->
+              <%# end %>
 
               <% if current_user.try(:admin?) %>
                   <!-- Edit link -->

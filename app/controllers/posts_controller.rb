@@ -59,6 +59,8 @@ class PostsController < ApplicationController
 
   def set_all_categories
     @categories = Category.all
+    # @post = Post.find(params[:id])
+    # @categories = @post.categories
   end
 
   def admin_only
