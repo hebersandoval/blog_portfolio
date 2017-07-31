@@ -24,8 +24,22 @@
           <hr>
             <!-- Date/Time -->
             <p><i class="fa fa-clock-o" aria-hidden="true"></i> Posted by Heber Sandoval on <%= @project.created_at.strftime("%B %d, %Y") %>
-              <%= link_to edit_project_path(@project), class: "btn btn-default btn-xs" do %>
-        					<i class="fa fa-pencil" aria-hidden="true"></i>
+
+              <!-- Project categories -->
+              <% @project.categories.each do |c| %>
+                  <span>In <%= link_to c.name, category_path(c) %></span>
+              <% end %>
+
+              <% if current_user.try(:admin?) %>
+                  <!-- Edit link -->
+                  <%= link_to edit_project_path(@project), class: "btn btn-default btn-xs" do %>
+                      <i class="fa fa-pencil" aria-hidden="true"></i>
+                  <% end %>
+
+                  <!-- Delete link -->
+                  <%= link_to @project, class: "btn btn-danger btn-xs", method: :delete, data: { confirm: "You sure?" } do %>
+                      <i class="fa fa-trash-o" aria-hidden="true"></i>
+                  <% end %>
               <% end %>
             </p>
           <hr>

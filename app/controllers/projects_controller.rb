@@ -19,6 +19,10 @@ class ProjectsController < ApplicationController
 
   def create
     @project = Project.create(project_params)
+    if params[:category_id]
+      @category = Category.find(params[:category_id])
+      @project.categories << @category
+    end
     if @project.save
       redirect_to project_path(@project)
     else
