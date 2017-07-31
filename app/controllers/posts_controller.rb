@@ -47,6 +47,11 @@ class PostsController < ApplicationController
     end
   end
 
+  def destroy
+    Post.find_by_slug(params[:id]).destroy
+    redirect_to posts_path
+  end
+
   private
 
   def post_params
