@@ -2,6 +2,7 @@ class ProjectsController < ApplicationController
   before_action :authenticate_user!, except: [:index, :show]
   before_action :admin_only, except: [:index, :show]
   before_action :set_project, only: [:show, :edit, :update]
+  before_action :set_all_categories, only: [:index, :show, :new, :edit]
 
   def index
     @projects = Project.all
@@ -49,6 +50,12 @@ class ProjectsController < ApplicationController
 
   def set_project
     @project = Project.find(params[:id])
+  end
+
+  def set_all_categories
+    # @categories = Category.all
+    @project = Project.find(params[:id])
+    @categories = @project.categories
   end
 
   def admin_only
