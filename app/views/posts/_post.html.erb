@@ -4,7 +4,7 @@
             <a href="#">
               <img class="img-responsive" src="https://unsplash.it/700/300?random" alt="">
             </a>
-            <h4 class="text-center"><%= link_to truncate(p.title, length: 30), post_path(p) %></h4>
+            <h4 class="text-center"><%= link_to truncate(p.title, length: 20), post_path(p) %></h4>
             <p><i class="fa fa-clock-o" aria-hidden="true"></i> Posted on <%= p.created_at.strftime("%B %d, %Y") %></p>
             <p><%= truncate p.content, length: 100 %></p>
         </div>
