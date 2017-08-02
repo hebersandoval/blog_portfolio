@@ -1,120 +1,118 @@
 <% provide(:title, "Project") %>
 
-<div class="container">
-    <!-- Page Heading/Breadcrumbs -->
-    <div class="row">
-        <div class="col-lg-12">
-            <h1 class="page-header">Project
-                <!-- Title -->
-                <small><%= @project.title %></small>
-            </h1>
-            <ol class="breadcrumb">
-                <li><a href="/">Home</a>
-                </li>
-                <li class="active">Project</li>
-            </ol>
-        </div>
-    </div><!-- /.row -->
+<!-- Page Heading/Breadcrumbs -->
+<div class="row">
+    <div class="col-lg-12">
+        <h1 class="page-header">Project
+            <!-- Title -->
+            <small><%= @project.title %></small>
+        </h1>
+        <ol class="breadcrumb">
+            <li><a href="/">Home</a>
+            </li>
+            <li class="active">Project</li>
+        </ol>
+    </div>
+</div><!-- /.row -->
 
-    <div class="row">
-      <!-- Project Content Column -->
-      <div class="col-md-9">
-          <!-- Preview Image -->
-          <img class="img-responsive" src="https://unsplash.it/900/300?random" alt="">
-          <hr>
-            <!-- Date/Time -->
-            <p><i class="fa fa-clock-o" aria-hidden="true"></i> Posted by Heber Sandoval on <%= @project.created_at.strftime("%B %d, %Y") %>
+<div class="row">
+  <!-- Project Content Column -->
+  <div class="col-md-9">
+      <!-- Preview Image -->
+      <img class="img-responsive" src="https://unsplash.it/900/300?random" alt="">
+      <hr>
+        <!-- Date/Time -->
+        <p><i class="fa fa-clock-o" aria-hidden="true"></i> Posted by Heber Sandoval on <%= @project.created_at.strftime("%B %d, %Y") %>
 
-              <!-- Project categories -->
-              <%# @project.categories.each do |c| %>
-                  <!-- <span>In <%#= link_to c.name, category_path(c) %></span> -->
-              <%# end %>
+          <!-- Project categories -->
+          <%# @project.categories.each do |c| %>
+              <!-- <span>In <%#= link_to c.name, category_path(c) %></span> -->
+          <%# end %>
 
-              <% if current_user.try(:admin?) %>
-                  <!-- Edit link -->
-                  <%= link_to edit_project_path(@project), class: "btn btn-default btn-xs" do %>
-                      <i class="fa fa-pencil" aria-hidden="true"></i>
-                  <% end %>
-
-                  <!-- Delete link -->
-                  <%= link_to @project, class: "btn btn-danger btn-xs", method: :delete, data: { confirm: "You sure?" } do %>
-                      <i class="fa fa-trash-o" aria-hidden="true"></i>
-                  <% end %>
+          <% if current_user.try(:admin?) %>
+              <!-- Edit link -->
+              <%= link_to edit_project_path(@project), class: "btn btn-default btn-xs" do %>
+                  <i class="fa fa-pencil" aria-hidden="true"></i>
               <% end %>
-            </p>
-          <hr>
-          <!-- Project Content -->
-          <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus, vero, obcaecati, aut, error quam sapiente nemo saepe quibusdam sit excepturi nam quia corporis eligendi eos magni recusandae laborum minus inventore?</p>
-          <p><%= @project.description %></p>
 
-          <!-- Related Projects Row -->
-          <div class="row">
-              <div class="col-lg-12">
-                  <h3 class="page-header">Project's Photo</h3>
-              </div>
+              <!-- Delete link -->
+              <%= link_to @project, class: "btn btn-danger btn-xs", method: :delete, data: { confirm: "You sure?" } do %>
+                  <i class="fa fa-trash-o" aria-hidden="true"></i>
+              <% end %>
+          <% end %>
+        </p>
+      <hr>
+      <!-- Project Content -->
+      <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus, vero, obcaecati, aut, error quam sapiente nemo saepe quibusdam sit excepturi nam quia corporis eligendi eos magni recusandae laborum minus inventore?</p>
+      <p><%= @project.description %></p>
 
-              <div class="col-sm-3 col-xs-6 hero-feature">
-                <div class="thumbnail text-center">
-                  <a href="recipe.html">
-                      <img class="img-responsive portfolio-item" src="https://unsplash.it/500/300?random" alt="">
-                  </a>
-                    <h4>
-                        <a href="#">Home Page</a>
-                    </h4>
-                </div>
-              </div>
+      <!-- Related Projects Row -->
+      <div class="row">
+          <div class="col-lg-12">
+              <h3 class="page-header">Project's Photo</h3>
+          </div>
 
-              <div class="col-sm-3 col-xs-6 hero-feature">
-                <div class="thumbnail text-center">
-                  <a href="#">
-                      <img class="img-responsive portfolio-item" src="https://unsplash.it/500/300?random" alt="">
-                  </a>
-                    <h4>
-                        <a href="#">Services Page</a>
-                    </h4>
-                </div>
-              </div>
+          <div class="col-sm-3 col-xs-6 hero-feature">
+            <div class="thumbnail text-center">
+              <a href="recipe.html">
+                  <img class="img-responsive portfolio-item" src="https://unsplash.it/500/300?random" alt="">
+              </a>
+                <h4>
+                    <a href="#">Home Page</a>
+                </h4>
+            </div>
+          </div>
 
-              <div class="col-sm-3 col-xs-6 hero-feature">
-                <div class="thumbnail text-center">
-                  <a href="#">
-                      <img class="img-responsive portfolio-item" src="https://unsplash.it/500/300?random" alt="">
-                  </a>
-                    <h4>
-                        <a href="#">Login Page</a>
-                    </h4>
-                </div>
-              </div>
+          <div class="col-sm-3 col-xs-6 hero-feature">
+            <div class="thumbnail text-center">
+              <a href="#">
+                  <img class="img-responsive portfolio-item" src="https://unsplash.it/500/300?random" alt="">
+              </a>
+                <h4>
+                    <a href="#">Services Page</a>
+                </h4>
+            </div>
+          </div>
 
-              <div class="col-sm-3 col-xs-6 hero-feature">
-                <div class="thumbnail text-center">
-                  <a href="#">
-                      <img class="img-responsive portfolio-item" src="https://unsplash.it/500/300?random" alt="">
-                  </a>
-                    <h4>
-                        <a href="#">Default Page</a>
-                    </h4>
-                </div>
-              </div>
-          </div><!-- /.row -->
+          <div class="col-sm-3 col-xs-6 hero-feature">
+            <div class="thumbnail text-center">
+              <a href="#">
+                  <img class="img-responsive portfolio-item" src="https://unsplash.it/500/300?random" alt="">
+              </a>
+                <h4>
+                    <a href="#">Login Page</a>
+                </h4>
+            </div>
+          </div>
 
-          <hr>
-          <!-- Pager -->
-          <ul class="pager">
-              <li class="previous">
-                  <a href="#">&larr; Older</a>
-              </li>
-              <li class="bck">
-                  <%= link_to 'Back', projects_path %>
-              </li>
-              <li class="next">
-                  <a href="#">Newer &rarr;</a>
-              </li>
-          </ul>
-      </div><!-- .col-md-9 -->
+          <div class="col-sm-3 col-xs-6 hero-feature">
+            <div class="thumbnail text-center">
+              <a href="#">
+                  <img class="img-responsive portfolio-item" src="https://unsplash.it/500/300?random" alt="">
+              </a>
+                <h4>
+                    <a href="#">Default Page</a>
+                </h4>
+            </div>
+          </div>
+      </div><!-- /.row -->
 
-      <!-- Portfolio Sidebar Widgets Column -->
-      <%= render 'pages/portfolio_sidebar' %>
+      <hr>
+      <!-- Pager -->
+      <ul class="pager">
+          <li class="previous">
+              <a href="#">&larr; Older</a>
+          </li>
+          <li class="bck">
+              <%= link_to 'Back', projects_path %>
+          </li>
+          <li class="next">
+              <a href="#">Newer &rarr;</a>
+          </li>
+      </ul>
+  </div><!-- .col-md-9 -->
 
-    </div><!-- /.row -->
-</div>
+  <!-- Portfolio Sidebar Widgets Column -->
+  <%= render 'pages/portfolio_sidebar' %>
+
+</div><!-- /.row -->

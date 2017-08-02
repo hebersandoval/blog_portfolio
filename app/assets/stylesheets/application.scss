@@ -20,8 +20,41 @@
  @import 'pygments';
 
  body {
-    margin-top: 0px; /* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
+    margin-top: 50px; /* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
 }
+
+// Page Header
+// .full-header {
+//   background-image: url('http://via.placeholder.com/100x200');
+//   background-color: center center;
+//   background-size: cover;
+//   height: 100px;
+//   width: 100vw;
+//   position: relative;
+//   margin-left: -50vw;
+//   height: 100px;
+//   margin-top: 100px;
+//   left: 50%;
+//   // display: block;
+// }
+
+.full-header {
+  width: 100vw;
+  position: relative;
+  margin-left: -50vw;
+  height: 250px;
+  margin-top: 10px;
+  left: 50%;
+
+  display: block;
+  text-align: center;
+  background: url('http://via.placeholder.com/100x200');
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -o-background-size: cover;
+}
+
 
  // Portfolio
  // body {
