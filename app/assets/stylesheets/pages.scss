@@ -1,3 +1,54 @@
 // Place all the styles related to the pages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+#services {
+  width: 100vw;
+  position: relative;
+  margin-left: -50vw;
+  height: 400px;
+  // margin-top: 10px;
+  left: 50%;
+
+  display: block;
+  text-align: center;
+  background-color: #F5F5F5;
+  // background: url('http://via.placeholder.com/100x200');
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -o-background-size: cover;
+}
+
+#team {
+  width: 100vw;
+  position: relative;
+  margin-left: -50vw;
+  height: 400px;
+  // margin-top: 10px;
+  left: 50%;
+
+  display: block;
+  text-align: center;
+  background-color: #FFFFFF;
+  // background: url('http://via.placeholder.com/100x200');
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -o-background-size: cover;
+}
+
+.section-headline {
+    padding: 20px 0;
+}
+
+.section-headline h1 {
+    font-size: 90px;
+    color: rgba(255,255,255,0.9);
+}
+
+.section-headline h2 {
+    font-size: 77px;
+    background: #fff;
+    background: rgba(255,255,255,0.9);
+}
