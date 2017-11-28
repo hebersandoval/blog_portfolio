@@ -17,7 +17,7 @@ gem 'will_paginate', '~> 3.1.0'
 # Don't use the font-awesome-sass gem, use the one below to work
 gem "font-awesome-rails"
 # To include md in post's content area
-gem 'pygments.rb', '~> 0.6.3'
+gem 'pygments.rb', '~> 1.2.0'
 gem 'redcarpet', '~> 3.4.0'
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
